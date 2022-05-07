@@ -193,7 +193,7 @@ void setState(const char *jsonString) {
 		NSString *imageName = state[@"Image"];
 		NSImage *image = [NSImage imageFromName:imageName withHeight:22];
 		_statusItem.button.image = image;
-		_statusItem.button.image.template = true;
+		_statusItem.button.image.template = !state[@"ImageNotTemplate"];
 		_statusItem.button.imagePosition = NSImageLeft;
 	});
 }

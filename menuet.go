@@ -83,8 +83,9 @@ func (a *Application) MenuChanged() {
 
 // MenuState represents the title and drop down,
 type MenuState struct {
-	Title string
-	Image string // // In Resources dir or URL, should have height 22
+	Title            string
+	Image            string // // In Resources dir or URL, should have height 22
+	ImageNotTemplate bool
 }
 
 func (a *Application) sendState(state *MenuState) {
